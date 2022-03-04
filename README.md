@@ -3,7 +3,9 @@ Task:
 Find last 100 uniq ip addresses in file with a structure
 
 01.01.2020 1.2.3.4 /index.html
+
 12.01.2020 192.168.10.11 /debian.html
+
 ......
 
 In general if the task was simply to output the last 100 unique IP addresses? then I would use the command
