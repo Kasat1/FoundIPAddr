@@ -20,7 +20,7 @@ But to complicate the task, I wrote 2 scripts, one on bash, the second on python
 
 It will create file "res.txt" with output, and it will print in output to console the same
 
-2. How to use python script:
+2.How to use python script:
 
 "python3 release.py  --f {{Name of file}} "
 
