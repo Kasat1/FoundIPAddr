@@ -7,7 +7,7 @@ But to complicate the task, I wrote 2 scripts, one on bash, the second on python
 
 1.How to use bash script:
 
-"./test {{ Name of file }}"
+"./foundip {{ Name of file }}"
 
 It will create file res.txt with output, and it will print in output to console the same
 
