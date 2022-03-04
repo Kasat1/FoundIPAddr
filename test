@@ -1,0 +1,15 @@
+#!/bin/bash
+if [ -n "$1" ]
+then
+echo ""
+else
+echo "No parameter found"
+fi
+res=$(cat $1 | sort -r -n -t . -k 3 -k 2 -k 1 | cut -d' ' -f2 | awk '!a[$0]++' | head -n 100)
+touch res.txt
+for ip in $res
+do
+#echo $ip #if we need output in console
+echo $ip >> res.txt
+done
+
