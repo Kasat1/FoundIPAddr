@@ -14,3 +14,5 @@ It will create file res.txt with output, and it will print in output to console 
 2. How to use python script:
 
 "python3 release.py  --f {{Name of file}} "
+
+It will create file final with output (!it will create only file!)
