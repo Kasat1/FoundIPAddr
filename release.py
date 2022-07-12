@@ -13,7 +13,7 @@ f = args.f
 
 original = open('Vagrantfile').read()
 new = re.sub('[^a-zA-Z0-9\n]', ' ', original)
-open('rez.txt', 'w').write(new)
+open('rez.txt', 'w').write(new )
 
 df = pd.read_csv('rez.txt', header=None, delimiter=' ')
 sorted = df.sort_values(by=[2, 1, 0], ascending=False)
