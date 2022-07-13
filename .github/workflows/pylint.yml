@@ -1,4 +1,4 @@
-name: Pylint
+name: Test
 
 on: [push]
 
@@ -20,4 +20,5 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        pylint $(git ls-files '*.py')
+        python release.py --f old_file.txt 
+        cat $final
