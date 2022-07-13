@@ -19,5 +19,13 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         python release.py --f ${GITHUB_WORKSPACE}/Vagrantfile 
-        ls -la ${GITHUB_WORKSPACE}
-        cat ${GITHUB_WORKSPACE}/final
+          envA=$(cat ${GITHUB_WORKSPACE}/res_file)
+          envB=$(cat ${GITHUB_WORKSPACE}/final)
+          if [[ "$envA" == "$envB" ]]
+          then
+           echo "All is good"
+          else
+           exit 1
+          fi
+        
+        #cat ${GITHUB_WORKSPACE}/final
