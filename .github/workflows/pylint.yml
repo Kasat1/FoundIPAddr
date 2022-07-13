@@ -18,5 +18,5 @@ jobs:
         pip install pandas
     - name: Analysing the code with pylint
       run: |
-        python release.py --f old_file.txt 
+        python release.py --f ${GITHUB_WORKSPACE}/old_file.txt 
         cat $final
