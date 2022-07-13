@@ -16,16 +16,15 @@ jobs:
         python -m pip install --upgrade pip
         pip install wheel
         pip install pandas
-    - name: Analysing the code with pylint
+    - name: Execute python file and compare it output with res_file
       run: |
         python release.py --f ${GITHUB_WORKSPACE}/Vagrantfile 
           envA=$(cat ${GITHUB_WORKSPACE}/res_file)
           envB=$(cat ${GITHUB_WORKSPACE}/final)
           if [[ "$envA" == "$envB" ]]
           then
-           echo "All is good"
+           echo "All is good, file is the same!"
           else
+           echo "file isn't same"
            exit 1
           fi
-        
-        #cat ${GITHUB_WORKSPACE}/final
