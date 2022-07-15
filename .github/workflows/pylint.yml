@@ -18,7 +18,7 @@ jobs:
         pip install pandas
     - name: Execute python file and compare it output with res_file
       run: |
-        python release.py --f ${GITHUB_WORKSPACE}/Vagrantfile 
+        python release.py --f ${GITHUB_WORKSPACE}/old_file.txt 
           envA=$(cat ${GITHUB_WORKSPACE}/res_file)
           envB=$(cat ${GITHUB_WORKSPACE}/final)
           if [[ "$envA" == "$envB" ]]
