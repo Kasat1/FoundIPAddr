@@ -11,7 +11,7 @@ parser.add_argument("--f")
 args = parser.parse_args()
 f = args.f
 
-original = open('Vagrantfile').read()
+original = open('old_file.txt').read()
 new = re.sub('[^a-zA-Z0-9\n]', ' ', original)
 open('rez.txt', 'w').write(new )
 
